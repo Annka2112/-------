@@ -1,9 +1,8 @@
-var arr = [1,2,3];
-var i = arr.length;
 function f(arr) {
+	var index = 0;
     if (Array.isArray(arr)) {
-        if (i) {
-            return getElem(arr, i);
+        if (arr.length) {
+            return getElem(arr, index);
         } else {
             throw new Error('Error: parameter cant be an empty') 
         }
@@ -12,11 +11,14 @@ function f(arr) {
     }
 }
 
-var getElem = function (arr, i) {
-    if (i = 0) {
-        return arr[i]
-    } else {
-        return arr[i];
-        getElem(arr, i- 1);
+function getElem(arr, index) {
+    if (index < arr.length) {
+        console.log(arr[index]);
+        getElem(arr, index + 1)
     }
 }
+
+f([1,2,3])
+f('Content')
+f(1,2,3)
+f([])
