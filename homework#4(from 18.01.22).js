@@ -23,11 +23,11 @@ var f = function(n) {
                 return 'Суббота';
             break;
             case 8:
-                return('Error: parameter should be in the range of 1 to 7');
+                throw new Error('Error: parameter should be in the range of 1 to 7');
             break;
         }
     } else {
-        throw Error ('parameter type is not a Number');
+        throw Error('parameter type is not a Number');
     }
 }
 

@@ -5,7 +5,7 @@ var f = function(...tmp) {
       if (typeof i === 'number') {
         result = (tmp[0] - tmp[1])/tmp[2];
       } else {
-        return ('all parameters type should be a Number');
+        throw new Error('all parameters type should be a Number');
       }
     }
     return result;

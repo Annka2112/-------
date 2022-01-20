@@ -8,11 +8,11 @@ function getDivisors(n) {
                 i++;
             }
         } else {
-            return ('Error: parameter cant be a 0')
+            throw new Error('Error: parameter cant be a 0')
         }
         return arr;
     } else {
-        return ('all parameters type should be a Number');
+        throw new Error('all parameters type should be a Number');
     }
 }
 console.log(getDivisors(12))

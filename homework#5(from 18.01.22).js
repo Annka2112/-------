@@ -15,7 +15,7 @@ function isPositive() {
             return false;
         }
     } else {
-        return ('all parameters type should be a Number');
+        throw new Error('all parameters type should be a Number');
     }
 }
 

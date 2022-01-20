@@ -5,7 +5,7 @@ var f = function(...tmp) {
       if (typeof i === 'number') {
           sum += i;
       } else {
-        return ('all parameters type should be a Number');
+        throw new Error('all parameters type should be a Number');
       }
     }
     return sum;
